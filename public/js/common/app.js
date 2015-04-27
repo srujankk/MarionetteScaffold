@@ -7,7 +7,7 @@ define([
      */
     console.log('Application ... ');
     var mainLayout = new MainLayout({
-        el: '#main-container'
+        el: '#app-container'
     });
 
     mainLayout.render();
