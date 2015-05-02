@@ -2,8 +2,9 @@ define([
     'underscore',
     'marionette',
     'text!portify/views/layout/mainLayout/template/mainLayout.html',
-    'portify/views/common/header/header'
-], function (_, Marionette, template, header) {
+    'portify/views/common/header/header',
+    'portify/views/dashboard/dashboard'
+], function (_, Marionette, template, Header, Dashboard) {
     return Marionette.LayoutView.extend({
         template: _.template(template),
         regions: {
@@ -16,7 +17,10 @@ define([
         onRender: function () {
             console.log('Layout Rendered ...');
             console.log('loading header');
-            this.header.show(new header());
+            this.header.show(new Header());
+
+            // TODO: implement the below display of dashboard with route
+            this.content.show(new Dashboard());
         }
     })
 });
