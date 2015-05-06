@@ -7,9 +7,6 @@ define([
         template: _.template(template),
         initialize: function (options) {
             this.listenTo(this.model, "change", this.render)
-        },
-        onRender: function () {
-            console.log("Rendering ......................");
         }
-    })
-})
+    });
+});
